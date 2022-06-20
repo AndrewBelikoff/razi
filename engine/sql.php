@@ -1,7 +1,7 @@
 <?php
 
 $debug = (isset($_REQUEST['alef_debug']) && $_REQUEST['alef_debug']==1);
-if (!isset($_SERVER['SERVER_NAME']) || in_array($_SERVER['SERVER_NAME'], ["test-genesis.alef.im", "devtest-genesis.alef.im", "localhost"]) || $debug) {
+if (!isset($_SERVER['SERVER_NAME']) || in_array($_SERVER['SERVER_NAME'], ["localhost"]) || $debug) {
     ini_set("display_errors", "On");
     error_reporting(E_ALL & ~E_NOTICE);
 } else {
